@@ -28,16 +28,16 @@ knitr::opts_chunk$set(echo = TRUE)
 #Challenge 1
 ```{r}
 library(stringr)
-#this creates the vector from the line
+#This creates the vector from the line
 v<- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
 
-#this removes punctuation
+#This removes punctuation
 v<-gsub("[[:punct:]]","",v)
 
-#splitting string into individual words
+#Splitting string into individual words
 v<-str_split(v, " ") [[1]]
 
-#extracting every third element from the vector (starting at the third element)
+#Extracting every third element from the vector (starting at the third element)
 v <- v[seq(3, length(v), by = 3)]
 v
 ```
@@ -47,20 +47,20 @@ v
 ```{r}
 m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
 m
-#i can now assign a variable x to row 4 column 5
+#I can now assign a variable x to row 4 column 5
 z <- m[4, 5]
 z
 
-#now i am going to extract the 2nd, 3rd, and 6th columns
+#Now I am going to extract the 2nd, 3rd, and 6th columns
 x<-m[, c(2, 3, 6 )]
 x
 
-#i am now assigning a new x value to the 6th to 8th rows
+#I am now assigning a new x value to the 6th to 8th rows
 x<- m[c(6, 8), ]
 x
 remove(x)
 
-#this is another way to perform the task of assigning a new x value to elements from row 2, column 2 to row 6, column 9 
+#This is another way to perform the task of assigning a new x value to elements from row 2, column 2 to row 6, column 9 
 x<-m[2:6, 2:9]
 x
 remove(x)
@@ -72,7 +72,7 @@ remove(m)
 ```{r}
 a <- array (data = 400:1, dim = c(5, 5, 4, 4))
 a
-#Now i am plugging in matrices to determine their values
+#Now I am plugging in matrices to determine their values
 a[1, 1, 1, 2]
 a[2, 3, 2, ]
 a[1:5, 1:5, 3, 3]
