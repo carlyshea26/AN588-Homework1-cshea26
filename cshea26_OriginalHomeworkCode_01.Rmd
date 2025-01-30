@@ -80,7 +80,7 @@ a[1:5, 1:5, 3, 3]
 
 #Challenge 4
 
-#Concatenating primate taxonomies together using the list function
+#Concatenating primate taxonomies together and organizing primate subgroups using the list function
 ```{r}
 Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
 Catarrhini <- c("Cercopithecidae", "Hylobatidae", "Hominidae")
