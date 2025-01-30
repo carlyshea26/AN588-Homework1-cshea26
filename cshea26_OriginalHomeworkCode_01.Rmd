@@ -32,10 +32,10 @@ library(stringr)
 v<- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
 
 #This removes punctuation
-v<-gsub("[[:punct:]]","",v)
+v <- gsub("[[:punct:]]","",v)
 
 #Splitting string into individual words
-v<-str_split(v, " ") [[1]]
+v <- str_split(v, " ") [[1]]
 
 #Extracting every third element from the vector (starting at the third element)
 v <- v[seq(3, length(v), by = 3)]
@@ -52,16 +52,16 @@ z <- m[4, 5]
 z
 
 #Now I am going to extract the 2nd, 3rd, and 6th columns
-x<-m[, c(2, 3, 6 )]
+x < -m[, c(2, 3, 6 )]
 x
 
-#I am now assigning a new x value to the 6th to 8th rows
-x<- m[c(6, 8), ]
+#Assigning a new x value to the 6th to 8th rows
+x <- m[c(6, 8), ]
 x
 remove(x)
 
 #This is another way to perform the task of assigning a new x value to elements from row 2, column 2 to row 6, column 9 
-x<-m[2:6, 2:9]
+x <-m [2:6, 2:9]
 x
 remove(x)
 remove(m)
@@ -72,7 +72,7 @@ remove(m)
 ```{r}
 a <- array (data = 400:1, dim = c(5, 5, 4, 4))
 a
-#Now I am plugging in matrices to determine their values
+#I am plugging in matrices to determine their values
 a[1, 1, 1, 2]
 a[2, 3, 2, ]
 a[1:5, 1:5, 3, 3]
@@ -80,6 +80,7 @@ a[1:5, 1:5, 3, 3]
 
 #Challenge 4
 
+#Concatenating primate taxonomies together using the list function
 ```{r}
 Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
 Catarrhini <- c("Cercopithecidae", "Hylobatidae", "Hominidae")
@@ -99,10 +100,12 @@ Primates
 ```
 
 #Challenge 5
-
+#Storing numbers as a 5 x 3 matrix labeled m3
+#This matrix is filled by row
 ```{r}
 m3 <- matrix(data=c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5, ncol = 3, byrow = TRUE)
 m3
+
 df <- as.data.frame(m3)
 df[[2]] <- as.logical((df[[2]]))
 df[[3]] <- as.factor((df[[2]]))
