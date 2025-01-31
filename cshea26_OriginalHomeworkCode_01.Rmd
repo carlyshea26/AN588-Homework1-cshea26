@@ -11,20 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
----
-title: "cshea26_OriginalHomeworkCode_01"
-output: html_document
-date: "2025-01-28"
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 #Challenge 1
 ```{r}
 library(stringr)
@@ -47,24 +33,19 @@ v
 ```{r}
 m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
 m
-#I can now assign a variable x to row 4 column 5
-z <- m[4, 5]
-z
 
-#Now I am going to extract the 2nd, 3rd, and 6th columns
-x < -m[, c(2, 3, 6 )]
+#I am extracting the 2nd, 3rd, and 6th columns and assigning them to the variable x
+x <- m[, c(2, 3, 6 )]
 x
 
-#Assigning a new x value to the 6th to 8th rows
+#Assigning a new x value to the 6th to 8th rows and extracting them
 x <- m[c(6, 8), ]
 x
-remove(x)
 
 #This is another way to perform the task of assigning a new x value to elements from row 2, column 2 to row 6, column 9 
-x <-m [2:6, 2:9]
+x <- m [2:6, 2:9]
 x
-remove(x)
-remove(m)
+
 ```
 
 #Challenge 3
@@ -108,7 +89,7 @@ m3
 
 df <- as.data.frame(m3)
 df[[2]] <- as.logical((df[[2]]))
-df[[3]] <- as.factor((df[[2]]))
+df[[3]] <- as.factor((df[[3]]))
 str(df)
 ```
 
