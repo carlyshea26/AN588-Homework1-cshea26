@@ -25,6 +25,7 @@ v <- str_split(v, " ") [[1]]
 
 #Extracting every third element from the vector (starting at the third element)
 v <- v[seq(3, length(v), by = 3)]
+
 v
 ```
 
@@ -92,4 +93,7 @@ df[[2]] <- as.logical((df[[2]]))
 df[[3]] <- as.factor((df[[3]]))
 str(df)
 ```
-
+#CHALLENGES
+#CHALLENGE 1: I really struggled with understanding how to go about the first question for challenge one. I ended up using the str_split function to separate the sentence itself into different words but then struggled with how to extract every third word (starting at the 3rd word itself). Originally I tried doing [v <- str_split(v, " ") [[1]]] but that didn't do anything other than put the word "Stately" out. I ended up doing v <- v[seq(3, length(v), by = 3)] which worked for me. Still confused on whether or not I needed to remove punctuation but I think I overcame my issue.
+#Challenge 4: When I tried to use the list function it didn't end up working. I realized then that I needed to use quotation marks when using the list function itself (which I didn't realize was different from actually concatenating the words together). I still feel like it looks kinda messy and would love any advice on how to make the output look cleaner.
+#General challenge: I was looking at how to make my file prettier and kind of struggled with doing so aside from general # ## for making titles and subtitles; any advice? Thank you!
