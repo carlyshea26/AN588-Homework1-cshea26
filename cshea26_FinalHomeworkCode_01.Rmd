@@ -14,7 +14,6 @@ output:
 ---
 <body style="background-color:#e0f5d3;">
 
-
 ## <span style='color: #1e631f;'>Table of Conents</span>
 * Challenge 1 
 * Challenge 2
