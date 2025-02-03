@@ -26,6 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## <span style='color: #1e631f;'>Challenge 1</span>
 ```{r}
+#After looking at comment from peer: I am also unsure if I should load all of my packages in a separate chunk at the top? This might be more efficient? Discuss furhter in class maybe?
 library(stringr)
 #This creates the vector from the line
 v<- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
@@ -37,14 +38,11 @@ v <- gsub("[[:punct:]]","",v)
 v <- str_split(v, " ") [[1]]
 
 #Extracting every third element from the vector (starting at the third element)
-v <- v[seq(3, length(v), by = 3)]
-v
+#After reading comment from peer: I am not sure if I should place the split string in a different vector
+#Idea after reading peer (directly use v[seq(3, length(v), by = 3)], instead of assigning it to a vector v <- v[seq(3, length(v), by = 3)] and then having to call for v)
+v[seq(3, length(v), by = 3)]
+
 ```
-saadams// line 16: I'm not sure if this is the correct process, but I might consider loading all of the packages you will be using at the very beginning of your document in a separate chunk.
-
-saadams// 23-27: I personally put the split string in a different vector, I don't know if it matters which way it is done! This might be a more efficient way and I'm curious if this is what I should have done.
-
-saadams// 27-29: I think it might be more concise to just do v[seq(3,length(v), by=3)] and get rid of line 29. I think just doing that would probably sequence and print the result you want and save you some space (it's not much space right now but maybe shortcuts are more helpful as this class gets harder)
 
 ## <span style='color: #1e631f;'>Challenge 2</span>
 ```{r}
@@ -56,6 +54,7 @@ x <- m[, c(2, 3, 6 )]
 x
 
 #Assigning a new x value to the 6th to 8th rows and extracting them
+#After peer feedback - I changed this to make it more consistent with how I assigned x in a later step. 
 x <- m[(6:8), ]
 x
 
@@ -77,11 +76,10 @@ a[1, 1, 1, 2]
 a[2, 3, 2, ]
 a[1:5, 1:5, 3, 3]
 ```
-saadams// 61: I might comment what the line does in case you look back on this later but this is all pretty much what I did. I think you were more concise with your comments than I was.
 
 ## <span style='color: #1e631f;'>Challenge 4</span>
 
-#Concatenating primate taxonomies together and organizing primate subgroups using the list function
+# Concatenating primate taxonomies together and organizing primate subgroups using the list function
 ```{r}
 Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
 Catarrhini <- c("Cercopithecidae", "Hylobatidae", "Hominidae")
@@ -99,11 +97,10 @@ Primates <- list(Haplorhini,Strepsirhini)
 names(Primates) <- list("Haplorhini","Strepsirhini")
 Primates
 ```
-saadams// we did pretty much everything the same thing! I added some spaces between the different groupings to make it a little easier to keep track of what I was doing.
+#I am still really struggling with how to make this look **nicer** when using the list function ( I am also a little confused on what the goal of this is in terms of how it should look as a final product) 
 
 ## <span style='color: #1e631f;'>Challenge 5</span>
-#Storing numbers as a 5 x 3 matrix labeled m3
-#This matrix is filled by row
+#Storing numbers as a 5 x 3 matrix labeled m3 (this matrix is filled by row)
 ```{r}
 m3 <- matrix(data=c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5, ncol = 3, byrow = TRUE)
 m3
@@ -113,16 +110,14 @@ df[[2]] <- as.logical((df[[2]]))
 df[[3]] <- as.factor((df[[3]]))
 str(df)
 ```
-saadams// we pretty much did the same thing! Your coding made me realize I should use <- for my version of line 96 instead of =.
 
-## <span style='color: #1e631f;'>Challenges I Faced</span>
+## <span style='color: #1e631f;'>Challenges I Faced From My Original Attempt</span>
 
 ### From Challenge 1: 
 #### I really struggled with understanding how to go about the first question for challenge one. I ended up using the str_split function to separate the sentence itself into different words but then struggled with how to extract every third word (starting at the 3rd word itself). Originally I tried doing [v <- str_split(v, " ") [[1]]] but that didn't do anything other than put the word "Stately" out. I ended up doing v <- v[seq(3, length(v), by = 3)] which worked for me. Still confused on whether or not I needed to remove punctuation but I think I overcame my issue.
 
 ### From Challenge 4: 
 #### When I tried to use the list function it didn't end up working. I realized then that I needed to use quotation marks when using the list function itself (which I didn't realize was different from actually concatenating the words together). I still feel like it looks kinda messy and would love any advice on how to make the output look cleaner.
-saadams// I also was wanting to make mine look better. Mine looks very similar to yours honestly. The only difference is that I left a space between the different levels I coded for just so it was easier for me to track which species belonged to group.
 
 #### General Challenge: 
 I was looking at how to make my file prettier and kind of struggled with doing so aside from general # ## for making titles and subtitles; any advice? Thank you! 
