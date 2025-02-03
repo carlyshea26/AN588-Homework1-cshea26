@@ -12,7 +12,6 @@ output:
       smooth_scroll: yes
 
 ---
-css: Font.css
 <body style="background-color:#e0f5d3;">
 
 
