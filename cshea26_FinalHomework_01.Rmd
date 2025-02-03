@@ -4,12 +4,17 @@ author: "Carly S McDermott"
 date: "2025-01-28"
 output: 
   html_document:
+    css: Font.css
     toc: yes
     toc_depth: 2
     toc_float: 
       collapsed: no
       smooth_scroll: yes
+
 ---
+css: Font.css
+<body style="background-color:#e0f5d3;">
+
 
 ## <span style='color: #1e631f;'>Table of Conents</span>
 * Challenge 1 
@@ -79,7 +84,7 @@ a[1:5, 1:5, 3, 3]
 
 ## <span style='color: #1e631f;'>Challenge 4</span>
 
-# Concatenating primate taxonomies together and organizing primate subgroups using the list function
+#Concatenating primate taxonomies together and organizing primate subgroups using the list function
 ```{r}
 Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
 Catarrhini <- c("Cercopithecidae", "Hylobatidae", "Hominidae")
